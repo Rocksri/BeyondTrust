@@ -13,9 +13,10 @@ A robust, thread-safe Python client for interacting with the BeyondTrust Passwor
 - **Thread-Safe:** Implements `threading.Lock` on sensitive token refresh operations to support multi-threaded test execution.
 - **Robot Framework Ready:** Includes a streamlined wrapper for direct usage as a test library.
 
-## 🛠 Installation
 
-```bash
-git clone [https://github.com/YourUsername/beyondtrust-api-client.git](https://github.com/YourUsername/beyondtrust-api-client.git)
-cd beyondtrust-api-client
-pip install -r requirements.txt
+## 🚀 Usage
+from beyondtrust_client import BeyondTrustClient
+
+client = BeyondTrustClient()
+secrets = client.get_secrets("DevOps_Vault")
+print(f"Retrieved {len(secrets)} credentials.")
